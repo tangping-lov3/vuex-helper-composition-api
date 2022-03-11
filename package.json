@@ -1,8 +1,8 @@
 {
   "name": "@tonyptang/vuex-helper-composition-api",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "vuex helper for composition-api",
-  "main": "index.js",
+  "main": "./dist/index.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsup"
@@ -10,6 +10,10 @@
   "repository": {
     "type": "git",
     "url": "https://gitee.com/tang-ping-y/vuex-helper-composition-api.git"
+  },
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.js"
   },
   "author": "tonyptang",
   "license": "ISC",
