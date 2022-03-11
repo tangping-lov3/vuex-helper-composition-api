@@ -24,5 +24,6 @@
   },
   "keywords": [
     "vuex-helper-composition-api"
-  ]
+  ],
+  "packageManager": "pnpm@6.24.2"
 }
