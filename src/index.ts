@@ -32,9 +32,11 @@ const getContext = () => {
   return currentInstance!.appContext.config.globalProperties
 }
 
-export const useMapState = (...args: Parameters<typeof mapState>) => withComputed(mapState(...args))
+type UseMapState = (...args: Parameters<typeof mapState>) => Record<string, ComputedRef>
 
-export const useMapGetters = (...args: Parameters<typeof mapGetters>) => withComputed(mapGetters(...args))
+export const useMapState: UseMapState = (...args) => withComputed(mapState(...args))
+
+export const useMapGetters = (...args: Parameters<typeof mapGetters>): Record<string, ComputedRef> => withComputed(mapGetters(...args))
 
 export const useMapActions = (...args: Parameters<typeof mapActions>) => {
   const actions = mapActions(...args)
