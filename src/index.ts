@@ -1,4 +1,4 @@
-import { computed, ComputedRef, AppConfig, getCurrentInstance } from 'vue'
+import { computed, ComputedRef, AppConfig, getCurrentInstance } from 'vue-demi'
 import { mapState, mapActions, mapGetters, mapMutations } from 'vuex'
 
 interface MapReturnd {

@@ -1,4 +1,5 @@
 import { defineConfig } from 'tsup'
+import { swcPlugin } from 'esbuild-plugin-swc'
 
 export default defineConfig({
   entry: ['./src/index.ts'],
@@ -9,5 +10,11 @@ export default defineConfig({
   format: [
     'cjs',
     "esm"
-  ]
+  ],
+  plugins: [],
+  esbuildPlugins: [swcPlugin({
+    jsc: {
+      target: 'es5'
+    }
+  })]
 })
